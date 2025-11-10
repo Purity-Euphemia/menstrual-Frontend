@@ -12,3 +12,11 @@ body {
   align-items: center;
   height: 100vh;
 }
+.hero {
+  text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
