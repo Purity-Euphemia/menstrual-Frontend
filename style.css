@@ -3,3 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
