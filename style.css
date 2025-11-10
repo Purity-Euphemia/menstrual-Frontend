@@ -29,6 +29,17 @@ body {
   font-size: 1rem;
   margin-bottom: 25px;
 }
+.hero button {
+  background-color: #ec407a;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
 
 
 
