@@ -129,3 +129,37 @@ footer {
 .footer-links a:hover {
   text-decoration: underline;
 }
+
+.hidden {
+  display: none;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: left;
+}
+
+.about-container h1, .about-container h2 {
+  color: #ad1457;
+}
+
+.about-container p {
+  margin-bottom: 16px;
+}
+
+.btn-secondary {
+  background: #f8bbd0;
+  border: none;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-secondary:hover {
+  background: #f48fb1;
+}
+
