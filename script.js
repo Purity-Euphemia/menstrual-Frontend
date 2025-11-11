@@ -1,8 +1,7 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const getStartedBtn = document.getElementById("getStartedBtn");
-
-  getStartedBtn.addEventListener("click", () => {
-    // Navigate to next page (Cycle Calculator)
-    window.location.href = "cycle-calculator.html";
+document.addEventListener("DOMContentLoaded", () => {
+  const startBtn = document.getElementById("startTracking");
+  startBtn.addEventListener("click", () => {
+    alert("Navigating to menstrual tracker...");
+    
   });
 });
