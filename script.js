@@ -1,17 +1,24 @@
+// Grab the Contact link and Contact page
+const contactLink = document.getElementById("contactLink");
+const contactPage = document.getElementById("contactPage");
 
-const aboutLink = document.getElementById('aboutLink');
-const aboutPage = document.getElementById('aboutPage');
-const homeSections = document.querySelectorAll(
-  '.hero, .featured, .features, .about, .testimonials, .partners, .faq, footer'
-);
+// When Contact is clicked
+contactLink.addEventListener("click", (e) => {
+  e.preventDefault(); // prevent default anchor behavior
+  contactPage.classList.toggle("hidden"); // show/hide the contact page
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
 
+// Close Contact Page with ESC
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && !contactPage.classList.contains("hidden")) {
+    contactPage.classList.add("hidden");
+  }
+});
 
-aboutLink.addEventListener('click', (e) => {
+// Optional: handle form submission (demo)
+document.getElementById("contactForm").addEventListener("submit", (e) => {
   e.preventDefault();
-
-  
-  homeSections.forEach(section => section.classList.add('hidden'));
-
-  
-  aboutPage.classList.remove('hidden');
+  alert("Thank you! Your message has been sent successfully.");
+  e.target.reset();
 });
