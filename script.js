@@ -1,24 +1,27 @@
-// Grab the Contact link and Contact page
-const contactLink = document.getElementById("contactLink");
-const contactPage = document.getElementById("contactPage");
+document.addEventListener("DOMContentLoaded", () => {
+  const aboutLink = document.getElementById("aboutLink");
+  const contactLink = document.getElementById("contactLink");
 
-// When Contact is clicked
-contactLink.addEventListener("click", (e) => {
-  e.preventDefault(); // prevent default anchor behavior
-  contactPage.classList.toggle("hidden"); // show/hide the contact page
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+  const aboutPage = document.getElementById("aboutPage");
+  const contactPage = document.getElementById("contactPage");
 
-// Close Contact Page with ESC
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && !contactPage.classList.contains("hidden")) {
+  // Hide other sections when opening one
+  function hideAllPages() {
+    aboutPage.classList.add("hidden");
     contactPage.classList.add("hidden");
   }
-});
 
-// Optional: handle form submission (demo)
-document.getElementById("contactForm").addEventListener("submit", (e) => {
-  e.preventDefault();
-  alert("Thank you! Your message has been sent successfully.");
-  e.target.reset();
+  aboutLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    hideAllPages();
+    aboutPage.classList.remove("hidden");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  contactLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    hideAllPages();
+    contactPage.classList.remove("hidden");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 });
