@@ -6,7 +6,6 @@ body {
   scroll-behavior: smooth;
 }
 
-/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -46,7 +45,6 @@ body {
   background: #d81b60;
 }
 
-/* HERO */
 .hero {
   text-align: center;
   padding: 80px 20px;
@@ -63,7 +61,7 @@ body {
   color: #555;
 }
 
-/* SECTIONS */
+
 section {
   padding: 60px 20px;
   text-align: center;
@@ -81,8 +79,8 @@ section {
   border-radius: 10px;
 }
 
-/* ABOUT */
-.about {
+
+ .about {
   background: #f9f9f9;
 }
 .about-points {
@@ -92,7 +90,7 @@ section {
   line-height: 1.8;
 }
 
-/* TESTIMONIALS */
+
 .testimonials {
   background: #fce4ec;
 }
@@ -162,4 +160,27 @@ footer {
 .btn-secondary:hover {
   background: #f48fb1;
 }
+/* Smooth hover and transition effects */
+a, button {
+  transition: all 0.3s ease;
+}
 
+/* Better section spacing on mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+
+  section {
+    padding: 40px 15px;
+  }
+}
+
+ 
+
+ 
